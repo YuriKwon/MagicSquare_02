@@ -1,0 +1,30 @@
+# Prompt — 대화형 프롬프트 Export
+
+이 폴더는 **4×4 Magic Square 문제 인식·정의** 세션의 프롬프트·응답을 대화형으로 재사용·재현할 수 있도록보낸 산출물입니다.
+
+## 파일
+
+| 파일 | 용도 |
+|------|------|
+| [transcript.md](./transcript.md) | 전체 대화 트랜스크립트 (User / Assistant 턴 순서) |
+| [interactive-prompt-chain.md](./interactive-prompt-chain.md) | 턴별 **User 프롬프트만** 복사·재실행용 체인 |
+| [system-context.md](./system-context.md) | 세션 전제·역할·제약 (문제 정의 전문가 모드) |
+
+## 사용 방법
+
+1. **처음부터 같은 흐름 재현:** `system-context.md` → `interactive-prompt-chain.md`의 Turn 1부터 순서대로 붙여 넣기  
+2. **기록 확인:** `transcript.md`에서 User·Assistant 전체 내용 검토  
+3. **보고서와 연계:** 분석 결과 본문은 [../Report/MagicSquare-ProblemDefinition-Report.md](../Report/MagicSquare-ProblemDefinition-Report.md)
+
+## 범위
+
+- Turn 1 ~ Turn 7 (문제 정의 STEP 1~5, Report Export, Prompt Export)
+- 구현·코드·알고리즘 요청 없음 (세션 일관)
+
+## Export 정보
+
+| 항목 | 값 |
+|------|-----|
+| Export 일자 | 2026-05-28 |
+| 프로젝트 | `DEV\MagicSquare` |
+| 모드 | 문제 정의 전문가 (관찰 → Why → 진짜 문제 정의) |
