@@ -1,0 +1,31 @@
+---
+description: Dual-Track TDD and pytest testing rules
+globs: "{tests/**/*.py,src/**/*.py}"
+alwaysApply: false
+---
+
+# Dual-Track TDD
+
+- Cycle: `RED -> GREEN -> REFACTOR`
+
+## RED
+
+- Write or update test first, then confirm it fails for the expected reason.
+- Use explicit assertions that describe intended behavior.
+
+## GREEN
+
+- Implement the smallest change to pass the failing test.
+- Keep scope tight to the behavior under test.
+
+## REFACTOR
+
+- Refactor only after tests are green.
+- Re-run relevant tests and preserve external behavior.
+
+# pytest Standards
+
+- Use `pytest` with `AAA` pattern (Arrange, Act, Assert).
+- Default fixture scope is `function` unless a broader immutable setup is necessary.
+- Keep minimum test coverage at `80%`.
+- Keep test names and files with `test_` prefix.

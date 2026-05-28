@@ -1,0 +1,22 @@
+---
+description: Python coding style and typing rules for MagicSquare
+globs: "**/*.py"
+alwaysApply: false
+---
+
+# Python Code Style
+
+- Follow `PEP8` strictly with max line length `88`.
+- Add type hints for all function parameters and return values.
+- Write Google-style docstrings for public classes, methods, and functions.
+- Prefer small, focused functions over large procedural blocks.
+
+# Error Handling
+
+- Catch specific exceptions rather than using broad handlers.
+- Re-raise or return clear failure states; do not swallow errors silently.
+
+# Maintainability
+
+- Use descriptive names for variables, functions, and constants.
+- Extract reusable constants instead of duplicating literals in logic.

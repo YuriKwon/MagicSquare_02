@@ -1,0 +1,157 @@
+################################################################################
+project:
+  name: MagicSquare
+  language: Python
+  python_version: "3.10+"
+  architecture_pattern: ECB
+  test_strategy: Dual-Track TDD
+
+################################################################################
+code_style:
+  python_version: "3.10+"
+  style_guide: "PEP8 strict"
+  type_hints: "Required for all function parameters and return values"
+  docstring: "Google style required for all public methods"
+  max_line_length: 88
+
+################################################################################
+architecture:
+  pattern: ECB
+  layers:
+    boundary:
+      role: "Handle external input/output (UI, API, CLI)"
+      responsibilities:
+        - "Parse/validate external requests"
+        - "Convert external data to internal DTOs"
+        - "Return formatted responses"
+    control:
+      role: "Handle business logic and use-case orchestration"
+      responsibilities:
+        - "Coordinate entities and workflows"
+        - "Apply application-level policies"
+        - "Manage transaction/use-case flow"
+    entity:
+      role: "Handle domain data and domain rules"
+      responsibilities:
+        - "Define core domain models"
+        - "Enforce domain invariants"
+        - "Provide domain behaviors without I/O concerns"
+  dependency_direction:
+    allowed:
+      - "boundary -> control"
+      - "control -> entity"
+    disallowed:
+      - "boundary -> entity (direct)"
+      - "entity -> control"
+      - "entity -> boundary"
+      - "control -> boundary"
+
+################################################################################
+tdd_rules:
+  methodology: "Dual-Track TDD"
+  cycle:
+    - RED
+    - GREEN
+    - REFACTOR
+  red_phase:
+    description: "Write a test first and verify it fails for the expected reason."
+    rules:
+      - "Create or update test before implementation code."
+      - "Run test and confirm failure is caused by missing behavior."
+      - "Document expected behavior with explicit assertions."
+    must_not:
+      - "Write production implementation before a failing test exists."
+      - "Bypass failure confirmation."
+      - "Use vague assertions that do not define behavior."
+  green_phase:
+    description: "Implement the minimum code needed to pass the failing test."
+    rules:
+      - "Write the smallest possible production change to pass RED test."
+      - "Run related tests to confirm pass."
+      - "Keep scope limited to the behavior under test."
+    must_not:
+      - "Refactor code in this phase."
+      - "Add unrelated features."
+      - "Optimize prematurely."
+  refactor_phase:
+    description: "Improve structure without changing behavior; keep tests and coverage stable."
+    rules:
+      - "Refactor only after tests are green."
+      - "Run full relevant test suite after each refactor."
+      - "Maintain or improve readability/design while preserving behavior."
+      - "Keep coverage at or above minimum threshold."
+    must_not:
+      - "Change external behavior or public contract."
+      - "Reduce test coverage."
+      - "Remove assertions to make tests easier to pass."
+
+################################################################################
+testing:
+  framework: pytest
+  pattern: AAA
+  coverage_minimum: "80%"
+  fixture_scope:
+    default: function
+    rules:
+      - "Use function scope by default for isolation."
+      - "Use module/session scope only for expensive immutable setup."
+      - "Avoid shared mutable state across tests."
+  naming_convention: "All test files/functions must use test_ prefix"
+  aaa_rules:
+    - "Arrange: prepare input/state and test doubles"
+    - "Act: execute one target behavior"
+    - "Assert: verify expected outcome explicitly"
+
+################################################################################
+forbidden:
+  - pattern: "print() for debugging in production or tests"
+    reason: "Creates noisy output and bypasses structured logging/diagnostics."
+    alternative: "Use logging with proper log levels or debugger tooling."
+  - pattern: "Hardcoded constants (magic numbers/strings) in logic"
+    reason: "Reduces maintainability and makes behavior brittle."
+    alternative: "Extract named constants/configuration and document intent."
+  - pattern: "Bare except: (except only without exception type)"
+    reason: "Hides real errors and makes failure diagnosis difficult."
+    alternative: "Catch specific exceptions and handle or re-raise explicitly."
+
+################################################################################
+file_structure:
+  # ECB-based recommended tree:
+  # .
+  # ├─ src/
+  # │  ├─ boundary/
+  # │  ├─ control/
+  # │  └─ entity/
+  # └─ tests/
+  #    ├─ boundary/
+  #    ├─ control/
+  #    ├─ entity/
+  #    └─ integration/
+  src_root: src
+  tests_root: tests
+  ecb_dirs:
+    - src/boundary
+    - src/control
+    - src/entity
+  test_dirs:
+    - tests/boundary
+    - tests/control
+    - tests/entity
+    - tests/integration
+
+################################################################################
+ai_behavior:
+  before_code_generation:
+    - "Check related existing test files before writing or modifying code."
+    - "Identify target ECB layer and expected dependencies first."
+    - "Ensure planned functions include type hints for params and return."
+  during_code_generation:
+    - "Do not violate ECB layer boundaries."
+    - "Do not generate functions without type hints."
+    - "Follow tdd_rules cycle (RED -> GREEN -> REFACTOR)."
+    - "Preserve PEP8 and max_line_length 88."
+  after_code_generation:
+    - "Verify tests affected by the change exist and are runnable with pytest."
+    - "Warn if any TDD rule was skipped or order was violated."
+    - "Warn if coverage target (80%) may be reduced."
+    - "Check no forbidden patterns were introduced."

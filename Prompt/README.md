@@ -15,11 +15,12 @@
 1. **처음부터 같은 흐름 재현:** `system-context.md` → `interactive-prompt-chain.md`의 Turn 1부터 순서대로 붙여 넣기  
 2. **기록 확인:** `transcript.md`에서 User·Assistant 전체 내용 검토  
 3. **보고서와 연계:** 분석 결과 본문은 [../Report/MagicSquare-ProblemDefinition-Report.md](../Report/MagicSquare-ProblemDefinition-Report.md)
+   추가 프롬프트 설계 보고서는 [../Report/MagicSquare-TDDPrompt-Design-Report.md](../Report/MagicSquare-TDDPrompt-Design-Report.md)
 
 ## 범위
 
-- Turn 1 ~ Turn 7 (문제 정의 STEP 1~5, Report Export, Prompt Export)
-- 구현·코드·알고리즘 요청 없음 (세션 일관)
+- Turn 1 ~ Turn 10 (문제 정의 STEP + 실행 프롬프트 설계 + 최신 Export)
+- 구현 코드 작성 요청은 배제, 설계 프롬프트 중심 세션
 
 ## Export 정보
 
