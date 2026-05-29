@@ -8,11 +8,13 @@
 |------|------|
 | [MagicSquare-ProblemDefinition-Report.md](./MagicSquare-ProblemDefinition-Report.md) | STEP 1~5 통합 보고서 (관찰, Why #1~#3, 진짜 문제 정의) |
 | [MagicSquare-TDDPrompt-Design-Report.md](./MagicSquare-TDDPrompt-Design-Report.md) | TDD 설계 문서 생성용 실행 프롬프트 설계/Export 보고서 |
+| [MagicSquare-Level1to5-Verification-Report.md](./MagicSquare-Level1to5-Verification-Report.md) | Level 1~5 Epic→Scenario 검증 보고서 |
+| [MagicSquare-AC-FR-01-01-TDD-Execution-Report.md](./MagicSquare-AC-FR-01-01-TDD-Execution-Report.md) | AC-FR-01-01 RED→GREEN TDD 실행 보고서 |
 
 ## 범위
 
-- 포함: 문제 관찰, 가정·구조 분석, TDD 관점, 불변 조건, 사고 능력 정의
-- 미포함: 구현 설계, 소스 코드, 알고리즘 설명
+- 포함: 문제 관찰, 가정·구조 분석, TDD 관점, 불변 조건, 사고 능력 정의, AC-FR-01-01 TDD 실행 요약
+- 미포함: FR-02~05 Domain 구현 상세 (별도 세션)
 
 ## 다음 단계 (권장, 본 폴더 외 작업)
 
