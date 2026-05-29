@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import pytest
 
-from boundary.input_validator import InputValidator
-
 
 class TestUIn06ValidationSuccess:
     """U-IN-06; FR-01 pass path on valid partial grid G1."""

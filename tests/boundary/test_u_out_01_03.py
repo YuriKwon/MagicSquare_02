@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import pytest
 
-from boundary.ui_boundary import UIBoundary
-
 
 class TestUOut01PayloadLength:
     """U-OUT-01; FR-05 output length; AC-FR-05, I8."""

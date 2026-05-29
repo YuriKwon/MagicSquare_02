@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import pytest
 
-from entity.services.magic_validator import is_magic_square
-
 
 class TestDVal01Baseline:
     """D-VAL-01; I1~I5 baseline valid complete grid G0."""

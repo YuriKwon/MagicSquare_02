@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import pytest
 
-from boundary.input_validator import InputValidator
-
 
 class TestUIn04ValueRange:
     """U-IN-04; FR-01 value range; AC-FR-01-03."""
