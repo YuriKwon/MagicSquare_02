@@ -9,6 +9,8 @@
 | [transcript.md](./transcript.md) | 전체 대화 트랜스크립트 (User / Assistant 턴 순서) |
 | [transcript-latest.md](./transcript-latest.md) | Cursor Rule + User Entity 세션 Transcript |
 | [transcript-ac-fr-01-01-tdd-latest.md](./transcript-ac-fr-01-01-tdd-latest.md) | AC-FR-01-01 TDD (RED→GREEN) 세션 Transcript |
+| [transcript-dualtrack-red-design-latest.md](./transcript-dualtrack-red-design-latest.md) | FR-01~FR-05 Dual-Track RED 설계 세션 Transcript |
+| [transcript-dualtrack-red-skeleton-latest.md](./transcript-dualtrack-red-skeleton-latest.md) | Dual-Track RED Skeleton pytest 세션 Transcript |
 | [interactive-prompt-chain.md](./interactive-prompt-chain.md) | 턴별 **User 프롬프트만** 복사·재실행용 체인 |
 | [system-context.md](./system-context.md) | 세션 전제·역할·제약 (문제 정의 전문가 모드) |
 
@@ -20,6 +22,8 @@
    - 문제 정의: [../Report/MagicSquare-ProblemDefinition-Report.md](../Report/MagicSquare-ProblemDefinition-Report.md)
    - TDD 프롬프트 설계: [../Report/MagicSquare-TDDPrompt-Design-Report.md](../Report/MagicSquare-TDDPrompt-Design-Report.md)
    - AC-FR-01-01 실행: [../Report/MagicSquare-AC-FR-01-01-TDD-Execution-Report.md](../Report/MagicSquare-AC-FR-01-01-TDD-Execution-Report.md)
+   - Dual-Track RED 설계: [../Report/MagicSquare-DualTrack-RED-Design-Report.md](../Report/MagicSquare-DualTrack-RED-Design-Report.md)
+   - Dual-Track RED Skeleton: [../Report/MagicSquare-DualTrack-RED-Skeleton-Execution-Report.md](../Report/MagicSquare-DualTrack-RED-Skeleton-Execution-Report.md)
 
 ## 범위
 
