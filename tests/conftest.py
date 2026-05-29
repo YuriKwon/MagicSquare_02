@@ -6,6 +6,12 @@ from typing import Any
 
 import pytest
 
+# Dual-Track RED grid placeholders (G0~G3) — Report/09 / Report/02
+# G0: [[16,3,2,13],[5,10,11,8],[9,6,7,12],[4,15,14,1]]  — complete valid (M=34)
+# G1: [[16,3,2,13],[5,0,11,8],[9,6,0,12],[4,15,14,1]]   — blanks (2,2),(3,3)
+# G2: PLACEHOLDER — Report/02 TBD (Step A fail, Step B success)
+# G3: PLACEHOLDER — Report/02 TBD (Step A and B both fail)
+
 # PRD §8.1 / AC-FR-01-01 failure contract
 INVALID_SIZE_CODE = "INVALID_SIZE"
 INVALID_SIZE_MESSAGE = "Grid must be 4x4."
