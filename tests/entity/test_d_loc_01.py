@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import pytest
 
-from entity.services.blank_locator import find_blank_coords
-
 
 class TestDLoc01BlankCoords:
     """D-LOC-01; I6 blank coords row-major 1-index on G1."""

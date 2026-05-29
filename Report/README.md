@@ -14,10 +14,11 @@
 | [MagicSquare-DualTrack-RED-Skeleton-Execution-Report.md](./MagicSquare-DualTrack-RED-Skeleton-Execution-Report.md) | Dual-Track RED Skeleton pytest 실행 보고서 (Track A/B, 23건) |
 | [MagicSquare-Stabilize-Green-InputValidation-Execution-Report.md](./MagicSquare-Stabilize-Green-InputValidation-Execution-Report.md) | stabilize/green · Report/08 테스트 추가 및 InputValidator GREEN 실행 보고서 |
 | [MagicSquare-Green-Roadmap-RED-Commit-Execution-Report.md](./MagicSquare-Green-Roadmap-RED-Commit-Execution-Report.md) | GREEN 로드맵 · RED 커밋 묶음 · README 갱신 실행 보고서 |
+| [17.MagicSquare_Session_Summary_Report.md](./17.MagicSquare_Session_Summary_Report.md) | **RPT-MS-017** — Report/14~16 Session Summary (REFACTOR 준비·로드맵·QA 커버리지) |
 
 ## 범위
 
-- 포함: 문제 관찰, 가정·구조 분석, TDD 관점, 불변 조건, 사고 능력 정의, AC-FR-01-01 TDD 실행 요약, Dual-Track RED 설계표, **RED Skeleton pytest 23건**, **stabilize/green InputValidator GREEN**, **GREEN 로드맵·RED 커밋 전략**
+- 포함: 문제 관찰, 가정·구조 분석, TDD 관점, 불변 조건, 사고 능력 정의, AC-FR-01-01 TDD 실행 요약, Dual-Track RED 설계표, **RED Skeleton pytest 23건**, **stabilize/green InputValidator GREEN**, **GREEN 로드맵·RED 커밋 전략**, **Session Summary (RPT-MS-017)**
 - 미포함: FR-02~05 Domain GREEN 구현 (별도 세션)
 
 ## 다음 단계 (권장, 본 폴더 외 작업)

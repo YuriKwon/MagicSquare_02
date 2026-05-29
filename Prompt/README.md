@@ -13,6 +13,7 @@
 | [transcript-dualtrack-red-skeleton-latest.md](./transcript-dualtrack-red-skeleton-latest.md) | Dual-Track RED Skeleton pytest 세션 Transcript |
 | [transcript-stabilize-green-input-validation-latest.md](./transcript-stabilize-green-input-validation-latest.md) | stabilize/green · InputValidator GREEN 세션 Transcript |
 | [transcript-green-roadmap-red-commit-latest.md](./transcript-green-roadmap-red-commit-latest.md) | GREEN 로드맵 · RED 커밋 묶음 · README 갱신 세션 Transcript |
+| [transcript-session-summary-latest.md](./transcript-session-summary-latest.md) | Report/14~16 Session Summary Export (RPT-MS-017) Transcript |
 | [interactive-prompt-chain.md](./interactive-prompt-chain.md) | 턴별 **User 프롬프트만** 복사·재실행용 체인 |
 | [system-context.md](./system-context.md) | 세션 전제·역할·제약 (문제 정의 전문가 모드) |
 
@@ -27,6 +28,7 @@
    - Dual-Track RED 설계: [../Report/MagicSquare-DualTrack-RED-Design-Report.md](../Report/MagicSquare-DualTrack-RED-Design-Report.md)
    - Dual-Track RED Skeleton: [../Report/MagicSquare-DualTrack-RED-Skeleton-Execution-Report.md](../Report/MagicSquare-DualTrack-RED-Skeleton-Execution-Report.md)
    - GREEN 로드맵·RED 커밋: [../Report/MagicSquare-Green-Roadmap-RED-Commit-Execution-Report.md](../Report/MagicSquare-Green-Roadmap-RED-Commit-Execution-Report.md)
+   - Session Summary: [../Report/17.MagicSquare_Session_Summary_Report.md](../Report/17.MagicSquare_Session_Summary_Report.md) · [../Prompting/17.MagicSquare_Session_Summary_Prompt_Transcript.md](../Prompting/17.MagicSquare_Session_Summary_Prompt_Transcript.md)
 
 ## 범위
 

@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import pytest
 
-from entity.services.missing_number_finder import find_not_exist_nums
-
 
 class TestDMis01MissingNumbers:
     """D-MIS-01; I7, I11 missing numbers sorted ascending on G1."""

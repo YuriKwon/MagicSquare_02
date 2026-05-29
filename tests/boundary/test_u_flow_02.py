@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import pytest
 
-from boundary.ui_boundary import UIBoundary
-
 
 class TestUFlow02DomainIsolation:
     """U-FLOW-02; invalid validation blocks SolvePartialMagicSquare.execute."""

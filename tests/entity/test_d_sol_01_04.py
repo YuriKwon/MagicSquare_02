@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import pytest
 
-from control.solution import solution
-
 
 class TestDSol01StepASuccess:
     """D-SOL-01; I8 Step A happy path on G1."""

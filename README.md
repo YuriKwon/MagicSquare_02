@@ -23,7 +23,9 @@
 | Dual-Track TDD | 🔄 **RED → GREEN** 진행 중 |
 | Legacy GREEN (AC-FR-01-01) | ✅ 34건 PASS (`BoundaryValidator`, `ResolveUseCase`) |
 | Full RED (U-IN-01~03) | ❌ 7건 FAIL (`InputValidator` E00x 계약) |
-| Skeleton RED (U-IN-04~, D-*) | ⚠️ 23건 collection ERROR (import 경로 미정렬) |
+| Skeleton RED (U-IN-04~, D-*) | ❌ 23건 FAIL (`pytest.fail` — import 정렬 완료) |
+| Entity scaffold (`test_user.py`) | ✅ 4건 PASS |
+| **전체 스위트** | **38 passed, 30 failed** (`python -m pytest -q`) |
 
 ### Python · 테스트 환경
 
@@ -59,17 +61,17 @@ python -m pytest tests/boundary/test_boundary_validator_size.py tests/control/te
 
 | 파일 | Test ID | 건수 | 상태 |
 |------|---------|------|------|
-| `tests/boundary/test_u_in_04_05.py` | U-IN-04, U-IN-05 | 2 | ⚠️ collection ERROR |
-| `tests/boundary/test_u_in_06_08.py` | U-IN-06, U-IN-07, U-IN-08 | 3 | ⚠️ collection ERROR |
-| `tests/boundary/test_u_out_01_03.py` | U-OUT-01~03 | 3 | ⚠️ collection ERROR |
-| `tests/boundary/test_u_flow_02.py` | U-FLOW-02 (+ext×2) | 3 | ⚠️ collection ERROR |
-| `tests/entity/test_d_loc_01.py` | D-LOC-01 | 1 | ⚠️ collection ERROR |
-| `tests/entity/test_d_mis_01.py` | D-MIS-01 | 1 | ⚠️ collection ERROR |
-| `tests/entity/test_d_val_01_06.py` | D-VAL-01~06 | 6 | ⚠️ collection ERROR |
-| `tests/entity/test_d_sol_01_04.py` | D-SOL-01~04 | 4 | ⚠️ collection ERROR |
+| `tests/boundary/test_u_in_04_05.py` | U-IN-04, U-IN-05 | 2 | ❌ FAIL |
+| `tests/boundary/test_u_in_06_08.py` | U-IN-06, U-IN-07, U-IN-08 | 3 | ❌ FAIL |
+| `tests/boundary/test_u_out_01_03.py` | U-OUT-01~03 | 3 | ❌ FAIL |
+| `tests/boundary/test_u_flow_02.py` | U-FLOW-02 (+ext×2) | 3 | ❌ FAIL |
+| `tests/entity/test_d_loc_01.py` | D-LOC-01 | 1 | ❌ FAIL |
+| `tests/entity/test_d_mis_01.py` | D-MIS-01 | 1 | ❌ FAIL |
+| `tests/entity/test_d_val_01_06.py` | D-VAL-01~06 | 6 | ❌ FAIL |
+| `tests/entity/test_d_sol_01_04.py` | D-SOL-01~04 | 4 | ❌ FAIL |
 | **합계** | | **23** | |
 
-> Skeleton 파일은 `pytest.fail("RED: …")` 패턴이며, import 경로(`boundary.*` → `src.boundary.*`) 정렬 후 FAIL로 전환됩니다.
+> Skeleton 파일은 `pytest.fail("RED: …")` 패턴입니다. GREEN 단계에서 `src.*` 모듈 구현 후 assert 본문을 활성화합니다.
 
 ---
 
