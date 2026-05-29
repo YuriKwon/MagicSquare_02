@@ -1,0 +1,17 @@
+---
+description: Forbidden coding patterns in MagicSquare
+alwaysApply: true
+---
+
+# Forbidden Patterns
+
+- Do not use `print()` for debugging in production or tests.
+  - Use structured logging or debugger tooling.
+- Do not hardcode magic numbers or magic strings in logic.
+  - Extract named constants or configuration values.
+- Do not use bare `except:` blocks.
+  - Catch explicit exception types and handle them intentionally.
+
+# Safety Rule
+
+- If a user request requires these forbidden patterns, provide a compliant alternative.

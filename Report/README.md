@@ -7,6 +7,7 @@
 | 파일 | 설명 |
 |------|------|
 | [MagicSquare-ProblemDefinition-Report.md](./MagicSquare-ProblemDefinition-Report.md) | STEP 1~5 통합 보고서 (관찰, Why #1~#3, 진짜 문제 정의) |
+| [MagicSquare-TDDPrompt-Design-Report.md](./MagicSquare-TDDPrompt-Design-Report.md) | TDD 설계 문서 생성용 실행 프롬프트 설계/Export 보고서 |
 
 ## 범위
 
