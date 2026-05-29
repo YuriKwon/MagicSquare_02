@@ -1,0 +1,22 @@
+---
+description: ECB architecture layer boundaries for MagicSquare
+globs: src/**/*.py
+alwaysApply: false
+---
+
+# ECB Architecture Rules
+
+- **Boundary layer** handles external I/O (CLI, API, UI), validation, and response formatting.
+- **Control layer** orchestrates use-cases and application workflows.
+- **Entity layer** owns domain models, invariants, and pure domain behavior.
+
+# Dependency Direction
+
+- Allowed: `boundary -> control`, `control -> entity`
+- Forbidden: `boundary -> entity` (direct), `entity -> control`, `entity -> boundary`, `control -> boundary`
+
+# Implementation Guardrails
+
+- Keep domain behavior in entities and avoid I/O in entity code.
+- Keep orchestration logic in control, not in boundary.
+- Reject code generation that violates layer boundaries.

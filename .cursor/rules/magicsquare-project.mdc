@@ -1,0 +1,19 @@
+---
+description: MagicSquare project baseline and AI workflow rules
+alwaysApply: true
+---
+
+# MagicSquare Project Baseline
+
+- Project name: `MagicSquare`
+- Language: `Python` (`3.10+`)
+- Architecture pattern: `ECB` (Boundary -> Control -> Entity)
+- Test strategy: `Dual-Track TDD`
+- Coverage target: at least `80%`
+
+# Working Expectations
+
+- Check existing related tests before writing or modifying implementation.
+- Identify the target ECB layer before coding.
+- Keep all generated code aligned with project test strategy and architecture.
+- Warn explicitly when a request would break these constraints.
