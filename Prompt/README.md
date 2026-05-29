@@ -11,6 +11,8 @@
 | [transcript-ac-fr-01-01-tdd-latest.md](./transcript-ac-fr-01-01-tdd-latest.md) | AC-FR-01-01 TDD (RED→GREEN) 세션 Transcript |
 | [transcript-dualtrack-red-design-latest.md](./transcript-dualtrack-red-design-latest.md) | FR-01~FR-05 Dual-Track RED 설계 세션 Transcript |
 | [transcript-dualtrack-red-skeleton-latest.md](./transcript-dualtrack-red-skeleton-latest.md) | Dual-Track RED Skeleton pytest 세션 Transcript |
+| [transcript-stabilize-green-input-validation-latest.md](./transcript-stabilize-green-input-validation-latest.md) | stabilize/green · InputValidator GREEN 세션 Transcript |
+| [transcript-green-roadmap-red-commit-latest.md](./transcript-green-roadmap-red-commit-latest.md) | GREEN 로드맵 · RED 커밋 묶음 · README 갱신 세션 Transcript |
 | [interactive-prompt-chain.md](./interactive-prompt-chain.md) | 턴별 **User 프롬프트만** 복사·재실행용 체인 |
 | [system-context.md](./system-context.md) | 세션 전제·역할·제약 (문제 정의 전문가 모드) |
 
@@ -24,6 +26,7 @@
    - AC-FR-01-01 실행: [../Report/MagicSquare-AC-FR-01-01-TDD-Execution-Report.md](../Report/MagicSquare-AC-FR-01-01-TDD-Execution-Report.md)
    - Dual-Track RED 설계: [../Report/MagicSquare-DualTrack-RED-Design-Report.md](../Report/MagicSquare-DualTrack-RED-Design-Report.md)
    - Dual-Track RED Skeleton: [../Report/MagicSquare-DualTrack-RED-Skeleton-Execution-Report.md](../Report/MagicSquare-DualTrack-RED-Skeleton-Execution-Report.md)
+   - GREEN 로드맵·RED 커밋: [../Report/MagicSquare-Green-Roadmap-RED-Commit-Execution-Report.md](../Report/MagicSquare-Green-Roadmap-RED-Commit-Execution-Report.md)
 
 ## 범위
 
@@ -34,6 +37,6 @@
 
 | 항목 | 값 |
 |------|-----|
-| Export 일자 | 2026-05-28 |
+| Export 일자 | 2026-05-29 |
 | 프로젝트 | `DEV\MagicSquare` |
 | 모드 | 문제 정의 전문가 (관찰 → Why → 진짜 문제 정의) |

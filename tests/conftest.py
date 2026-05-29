@@ -16,6 +16,14 @@ import pytest
 INVALID_SIZE_CODE = "INVALID_SIZE"
 INVALID_SIZE_MESSAGE = "Grid must be 4x4."
 
+# Dual-Track RED failure envelope (Report/09 §2.4)
+E003_CODE = "E003"
+E003_MESSAGE = "Input matrix must not be null."
+E001_CODE = "E001"
+E001_MESSAGE = "Grid must be 4x4."
+E002_CODE = "E002"
+E002_MESSAGE = "Exactly two blank cells (value 0) are required."
+
 
 @pytest.fixture
 def grid_none() -> None:
@@ -57,3 +65,33 @@ def grid_five_by_five() -> list[list[int]]:
 def size_fail_grid(request: pytest.FixtureRequest) -> Any:
     """Parametrized invalid-size grids for isolation tests."""
     return request.getfixturevalue(request.param)
+
+
+@pytest.fixture
+def grid_g0() -> list[list[int]]:
+    """G0 — complete valid magic square (zero blanks)."""
+    return [
+        [16, 3, 2, 13],
+        [5, 10, 11, 8],
+        [9, 6, 7, 12],
+        [4, 15, 14, 1],
+    ]
+
+
+@pytest.fixture
+def grid_g1() -> list[list[int]]:
+    """G1 — two blanks at (2,2) and (3,3); missing {7, 10}."""
+    return [
+        [16, 3, 2, 13],
+        [5, 0, 11, 8],
+        [9, 6, 0, 12],
+        [4, 15, 14, 1],
+    ]
+
+
+@pytest.fixture
+def grid_g1_three_blanks(grid_g1: list[list[int]]) -> list[list[int]]:
+    """G1 with (1,1)=0 — three blank cells."""
+    matrix = [row[:] for row in grid_g1]
+    matrix[0][0] = 0
+    return matrix
